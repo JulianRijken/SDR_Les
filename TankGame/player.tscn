@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://yq8kby63dho7"]
+
+[ext_resource type="Script" uid="uid://ru3ns64kg1se" path="res://character_body_3d.gd" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u6xtl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u6xtl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4flbx"]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("fire_point")]
+script = ExtResource("1_4flbx")
+speed = 3
+jump_strenght = 50
+fire_point = NodePath("Node3D/FirePoint")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_u6xtl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_u6xtl")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.748532, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.09507615, 0, 0, 0, 0.44143546, 0, 0, 0, 0.09658931, 0, 0, 0)
+mesh = SubResource("BoxMesh_4flbx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.0028288409, 0.44124, 0, -0.095034055, 0.013134216, 0, 0, 0, 0.09658931, 0.18816453, 0.18785574, 0)
+mesh = SubResource("BoxMesh_4flbx")
+
+[node name="FirePoint" type="Node3D" parent="Node3D"]
+transform = Transform3D(-4.371139e-08, -0.45761013, -0.88915294, 0, 0.88915294, -0.45761013, 1, -2.0002775e-08, -3.886611e-08, 0.4522717, 0.17289096, 0)
