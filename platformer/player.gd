@@ -4,6 +4,11 @@ extends CharacterBody2D
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
+var rng = RandomNumberGenerator.new()
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -11,12 +16,30 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_sound.pitch_scale = rng.randf_range(0.4, 0.8)
+		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("move_left", "move_right")
+	
+	# Flip sprite to direction
+	if direction > 0:
+		sprite.flip_h = false
+	if direction < 0:
+		sprite.flip_h = true
+	
+	# Animate player
+	if is_on_floor():
+		if direction == 0:
+			sprite.play("idle")
+		else:
+			sprite.play("walk")
+	else:
+		sprite.play("jump")
+	
+	# Apply input to velocity
 	if direction:
 		velocity.x = direction * SPEED
 	else:
