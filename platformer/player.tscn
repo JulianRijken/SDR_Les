@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dve8hfghfvdfr"]
+[gd_scene format=3 uid="uid://dve8hfghfvdfr"]
 
 [ext_resource type="Texture2D" uid="uid://bd4fgamr0s365" path="res://assets/sprites/knight.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://d1qsu4c0tinqu" path="res://player.gd" id="1_onrkg"]
@@ -43,14 +43,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=881314746]
+collision_layer = 2
 script = ExtResource("1_onrkg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1865412216]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_onrkg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1238832457]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"idle"
