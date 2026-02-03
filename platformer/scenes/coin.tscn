@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyfjarln2ph88"]
 
-[ext_resource type="Script" uid="uid://cb6lcvudalj73" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Script" uid="uid://cb6lcvudalj73" path="res://scripts/coin.gd" id="1_0t63x"]
 [ext_resource type="Texture2D" uid="uid://d4fwq6yk3reuv" path="res://assets/sprites/coin.png" id="1_d5gmh"]
 [ext_resource type="AudioStream" uid="uid://dn80opsbq6oen" path="res://assets/sounds/coin.wav" id="3_v7riw"]
 
@@ -167,7 +167,7 @@ tracks/1/keys = {
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SoundSteam")
+tracks/2/path = NodePath("PickupSound")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -210,7 +210,8 @@ sprite_frames = SubResource("SpriteFrames_s5w7y")
 autoplay = "default"
 frame_progress = 0.49135235
 
-[node name="SoundSteam" type="AudioStreamPlayer2D" parent="." unique_id=574185601]
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=574185601]
+bus = &"SFX"
 
 [node name="PickupAnimation" type="AnimationPlayer" parent="." unique_id=1192239466]
 libraries/ = SubResource("AnimationLibrary_pdq0q")

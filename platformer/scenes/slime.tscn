@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n73h5swb5ub"]
 
-[ext_resource type="Script" uid="uid://cm8av7wyc745r" path="res://slime.gd" id="1_4l1t8"]
-[ext_resource type="PackedScene" uid="uid://cmhvtqb5hmlb8" path="res://killzone.tscn" id="1_5jc4t"]
+[ext_resource type="Script" uid="uid://cm8av7wyc745r" path="res://scripts/slime.gd" id="1_4l1t8"]
+[ext_resource type="PackedScene" uid="uid://cmhvtqb5hmlb8" path="res://scenes/killzone.tscn" id="1_5jc4t"]
 [ext_resource type="Texture2D" uid="uid://bmn317iwnsb6x" path="res://assets/sprites/slime_green.png" id="2_4l1t8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppcr1"]

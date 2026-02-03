@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://c065yuhffg4cg"]
 
-[ext_resource type="PackedScene" uid="uid://dve8hfghfvdfr" path="res://player.tscn" id="1_80nbo"]
-[ext_resource type="Script" uid="uid://givh8ea1sdom" path="res://game_manager.gd" id="1_eow3j"]
+[ext_resource type="PackedScene" uid="uid://dve8hfghfvdfr" path="res://scenes/player.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://givh8ea1sdom" path="res://scripts/game_manager.gd" id="1_eow3j"]
 [ext_resource type="TileSet" uid="uid://bujlanysuf07f" path="res://main_tile_set.tres" id="2_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://srmn73pvqxi" path="res://platform.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://srmn73pvqxi" path="res://scenes/platform.tscn" id="2_feb5d"]
 [ext_resource type="FontFile" uid="uid://x2iclcplexev" path="res://assets/fonts/PixelOperator8.ttf" id="2_j5wjh"]
-[ext_resource type="PackedScene" uid="uid://cmhvtqb5hmlb8" path="res://killzone.tscn" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://dyfjarln2ph88" path="res://coin.tscn" id="5_7jktm"]
-[ext_resource type="PackedScene" uid="uid://n73h5swb5ub" path="res://slime.tscn" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://cmhvtqb5hmlb8" path="res://scenes/killzone.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://dyfjarln2ph88" path="res://scenes/coin.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://n73h5swb5ub" path="res://scenes/slime.tscn" id="6_ryrav"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vef74"]
 font = ExtResource("2_j5wjh")
@@ -83,13 +83,10 @@ script = ExtResource("1_eow3j")
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=1610193402]
 
 [node name="Panel" type="Panel" parent="GameManager/CanvasLayer" unique_id=1402580303]
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.77900004
-offset_left = 25.0
-offset_top = 30.0
-offset_right = -899.0
-offset_bottom = -421.79202
+offset_left = 22.0
+offset_top = 22.0
+offset_right = 260.0
+offset_bottom = 90.0
 
 [node name="Label" type="Label" parent="GameManager/CanvasLayer" unique_id=269943039]
 offset_left = 38.0
@@ -133,6 +130,7 @@ z_index = 1
 position = Vector2(7, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1328179793]
+physics_interpolation_mode = 2
 position = Vector2(-6, 13)
 zoom = Vector2(4, 4)
 limit_bottom = 64

@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dve8hfghfvdfr"]
 
 [ext_resource type="Texture2D" uid="uid://bd4fgamr0s365" path="res://assets/sprites/knight.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://d1qsu4c0tinqu" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://d1qsu4c0tinqu" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="AudioStream" uid="uid://b0w6ok7nj785a" path="res://assets/sounds/jump.wav" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://coolcllh2qxvq" path="res://assets/sounds/hurt.wav" id="4_dqkch"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 radius = 6.0
@@ -212,3 +213,9 @@ frame_progress = 0.8953927
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=1136001721]
 stream = ExtResource("3_i3pqv")
 pitch_scale = 0.65
+bus = &"SFX"
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=194690097]
+stream = ExtResource("4_dqkch")
+pitch_scale = 0.65
+bus = &"SFX"

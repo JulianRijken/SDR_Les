@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 
@@ -8,7 +9,15 @@ var rng = RandomNumberGenerator.new()
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
 
+func damage(damage: int) -> void:
+	print("Player Damaged " + str(damage))
+	kill();
+
+func kill() -> void:
+	print("Player Killed")
+	death_sound.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
