@@ -1,6 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
+signal died
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
@@ -9,16 +10,29 @@ var rng = RandomNumberGenerator.new()
 
 var is_dead: bool = false
 
+@export var death_slow_down_speed: float = 400
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
+
 
 func do_damage(damage: int) -> void:
+	if is_dead == true:
+		return 
+	kill();
+
+
+func kill():
 	sprite.play("dying")
 	is_dead = true
-	print("Player was hurt")
-
-func _input(event: InputEvent) -> void:
-	print(event)
+	died.emit()
+	death_sound.play()
+	GameManager.player_died()
+	
+	
+#func _input(event: InputEvent) -> void:
+	#print(event)
 
 func _physics_process(delta: float) -> void:
 	
@@ -27,6 +41,8 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	if is_dead == true:
+		print(velocity)
+		velocity = velocity.move_toward(Vector2(0,0), delta * death_slow_down_speed)
 		move_and_slide()
 		return
 
