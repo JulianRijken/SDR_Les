@@ -5,19 +5,32 @@ extends Node
 
 
 var score: int = 0
+var inventory: Array = []
+
+enum ItemType 
+{
+	key = 0, 
+	potion = 1,
+	crown = 2,
+	skull = 3
+}
+ 
+
 
 	
 func game_over():
+	game_over_animation.stop()
 	game_over_animation.play("game_over")
 
 func restart_game():
 	get_tree().reload_current_scene()
 	reset_score()
 	
+func add_item(item):
+	inventory.append(item)
 
-
-func add_score():
-	score += 1
+func add_score(ammount = 1):
+	score += ammount
 	update_score_ui()
 
 func reset_score():

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0shkwrwtlkcv"]
 
 [ext_resource type="PackedScene" uid="uid://srmn73pvqxi" path="res://scenes/platform.tscn" id="1_61u01"]
-[ext_resource type="Script" uid="uid://bfi11kxukx8a2" path="res://scenes/breaking_platform.gd" id="1_erf5c"]
+[ext_resource type="Script" uid="uid://bfi11kxukx8a2" path="res://scripts/breaking_platform.gd" id="1_erf5c"]
 [ext_resource type="AudioStream" uid="uid://coolcllh2qxvq" path="res://assets/sounds/hurt.wav" id="3_jomsx"]
 
 [sub_resource type="Animation" id="Animation_j5wjh"]
@@ -25,6 +25,18 @@ tracks/1/path = NodePath("CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Area2D/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -73,6 +85,18 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0)
 }
 tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hve3p"]
 _data = {

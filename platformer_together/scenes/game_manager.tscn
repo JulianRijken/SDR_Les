@@ -93,6 +93,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="GameManager" type="Node" unique_id=719424245]
 script = ExtResource("1_glms7")
+item_info = null
 
 [node name="GameOverAnimation" type="AnimationPlayer" parent="." unique_id=41260003]
 root_node = NodePath("../CanvasLayer/GameOverScreen")

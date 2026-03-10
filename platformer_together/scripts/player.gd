@@ -41,8 +41,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	if is_dead == true:
-		print(velocity)
-		velocity = velocity.move_toward(Vector2(0,0), delta * death_slow_down_speed)
+		velocity.x = move_toward(velocity.x, 0.0, delta * death_slow_down_speed);
 		move_and_slide()
 		return
 
