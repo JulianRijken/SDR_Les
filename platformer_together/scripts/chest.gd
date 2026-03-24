@@ -1,11 +1,6 @@
 extends Node2D
 
-@export var coins: int = 0
-@export var has_item: bool
-@export var item_type: GameManager.ItemType
-
-@export var coin_texture: Texture
-@export var key_texture: Texture
+@export var item_data: ItemData
 
 @onready var chest_sprite: AnimatedSprite2D = $ChestSprite
 @onready var chest_open_sound: AudioStreamPlayer2D = $ChestOpenSound
@@ -18,10 +13,8 @@ func _on_interactable_interacted() -> void:
 	chest_open_sound.play()
 	item_animation.play("item_reveal")
 
-	if has_item:
-		item_sprite.texture = key_texture
-		GameManager.add_item(item_type)
-	else:
-		item_sprite.texture = coin_texture
-		GameManager.add_score(coins)
+	if item_data != null:
+		item_sprite.texture = item_data.texture
+		GameManager.add_item(item_data)
+		
 	pass

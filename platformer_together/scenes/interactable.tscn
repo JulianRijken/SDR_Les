@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhfdsc412b2ei"]
 
 [ext_resource type="Script" uid="uid://bg0oon43k2e0k" path="res://scripts/interactable.gd" id="1_56v82"]
-[ext_resource type="FontFile" uid="uid://dc32unk737b2b" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_ij5l6"]
+[ext_resource type="FontFile" uid="uid://x2iclcplexev" path="res://assets/fonts/PixelOperator8.ttf" id="2_ij5l6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3aalw"]
 radius = 35.0
@@ -94,7 +94,7 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_8o6w2"]
 font = ExtResource("2_ij5l6")
 font_size = 8
-font_color = Color(1, 1, 0.7529412, 0.92941177)
+font_color = Color(0.82, 0.895, 1, 1)
 
 [node name="Interactable" type="Area2D" unique_id=137774548]
 collision_mask = 2
@@ -109,8 +109,8 @@ libraries/ = SubResource("AnimationLibrary_w4xns")
 [node name="Info" type="Panel" parent="." unique_id=1567993296]
 modulate = Color(1, 1, 1, 0)
 offset_left = -8.0
-offset_right = 8.0
-offset_bottom = 16.0
+offset_right = 5.0
+offset_bottom = 13.0
 scale = Vector2(1e-05, 1e-05)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
@@ -121,8 +121,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -3.5
-offset_bottom = 3.5
+offset_left = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "E"
