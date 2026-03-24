@@ -2,14 +2,15 @@ extends Node
 
 @onready var label: Label = $CanvasLayer/Label
 @onready var game_over_animation: AnimationPlayer = $GameOverAnimation
+@onready var inventory_ui: InventoryUI  = $CanvasLayer/InventoryUI
 
+@export var inventory: InventoryData
 
 var score: int = 0
-var inventory: Array[ItemData] = []
 
+func _process(delta: float) -> void:
+	inventory_ui.update(inventory);
 
-
-	
 func game_over():
 	game_over_animation.stop()
 	game_over_animation.play("game_over")
@@ -17,10 +18,7 @@ func game_over():
 func restart_game():
 	get_tree().reload_current_scene()
 	reset_score()
-	
-func add_item(item: ItemData):
-	inventory.append(item)
-	print(inventory)
+	inventory.clear_items()
 
 func add_score(ammount = 1):
 	score += ammount

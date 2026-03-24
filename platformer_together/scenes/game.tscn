@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cslp6degwfsiu" path="res://scenes/chest.tscn" id="7_0tnpc"]
 [ext_resource type="Resource" uid="uid://bb6idrcywte3y" path="res://inventory/items/item_coin.tres" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://0shkwrwtlkcv" path="res://scenes/breaking_platform.tscn" id="8_gee14"]
+[ext_resource type="Resource" uid="uid://dc3auqaseylpw" path="res://inventory/items/item_thee.tres" id="8_kvuet"]
 [ext_resource type="PackedScene" uid="uid://82f7iyhvb6xt" path="res://scenes/moving_platform.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cxf1tw22fytmi" path="res://scenes/hiding_cat.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://11w20fnkrdxi" path="res://scenes/falling_apple.tscn" id="11_kvpfn"]
@@ -212,11 +213,18 @@ position = Vector2(672, -171)
 
 [node name="Chest" parent="Level" unique_id=1301765005 instance=ExtResource("7_0tnpc")]
 position = Vector2(26, 0)
+item_data = ExtResource("8_kvuet")
 
 [node name="Chest2" parent="Level" unique_id=1376687968 instance=ExtResource("7_0tnpc")]
-position = Vector2(-464, -74)
-scale = Vector2(-1, 1)
+position = Vector2(-454, -74)
 item_data = ExtResource("8_dinhu")
+
+[node name="ChestSprite" parent="Level/Chest2" index="1" unique_id=192617155]
+position = Vector2(-9, -12)
+flip_h = true
+
+[node name="CollisionShape2D" parent="Level/Chest2/StaticBody2D" parent_id_path=PackedInt32Array(1376687968, 1147746003) index="0" unique_id=732736178]
+position = Vector2(3, -1)
 
 [node name="BreakingPlatform6" parent="Level" unique_id=141797466 instance=ExtResource("8_gee14")]
 position = Vector2(1122, -60)
@@ -367,4 +375,5 @@ position = Vector2(16, -149)
 [node name="FallingApple14" parent="." unique_id=555783392 instance=ExtResource("11_kvpfn")]
 position = Vector2(21, -133)
 
+[editable path="Level/Chest2"]
 [editable path="MovingPlatform2"]

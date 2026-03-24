@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://givh8ea1sdom" path="res://scripts/game_manager.gd" id="1_glms7"]
 [ext_resource type="Resource" uid="uid://djxc88q5niu0i" path="res://inventory/player_inventory.tres" id="2_oo155"]
 [ext_resource type="FontFile" uid="uid://x2iclcplexev" path="res://assets/fonts/PixelOperator8.ttf" id="2_udu3i"]
-[ext_resource type="PackedScene" uid="uid://dghigwi8wlaaw" path="res://inventory/inventory_ui.tscn" id="3_eaq8r"]
 [ext_resource type="FontFile" uid="uid://dc32unk737b2b" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_udu3i"]
 
 [sub_resource type="Animation" id="Animation_udu3i"]
@@ -102,13 +101,6 @@ root_node = NodePath("../CanvasLayer/GameOverScreen")
 libraries/ = SubResource("AnimationLibrary_eaq8r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=620611435]
-
-[node name="InventoryUI" parent="CanvasLayer" unique_id=940596079 instance=ExtResource("3_eaq8r")]
-visible = false
-offset_left = 265.0
-offset_top = 121.0
-offset_right = -361.0
-offset_bottom = -169.0
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2025464043]
 offset_left = 20.0

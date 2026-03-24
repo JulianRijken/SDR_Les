@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dghigwi8wlaaw"]
+
+[ext_resource type="Script" uid="uid://cx6e13d0mv4yw" path="res://inventory/inventory_ui.gd" id="1_2hut1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfbh7"]
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 0.85490197)
+
+[node name="InventoryUI" type="Control" unique_id=940596079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -626.0
+offset_bottom = -287.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hut1")
+
+[node name="Panel" type="Panel" parent="." unique_id=452917818]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfbh7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1744549760]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 39.0
+offset_right = -42.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer" unique_id=764984623]
+layout_mode = 2
+columns = 6

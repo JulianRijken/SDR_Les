@@ -15,6 +15,5 @@ func _on_interactable_interacted() -> void:
 
 	if item_data != null:
 		item_sprite.texture = item_data.texture
-		GameManager.add_item(item_data)
-		
+		GameManager.inventory.add_item(item_data)
 	pass
