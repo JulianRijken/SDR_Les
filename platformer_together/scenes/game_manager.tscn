@@ -94,6 +94,7 @@ outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
 [node name="GameManager" type="Node" unique_id=719424245]
+process_mode = 3
 script = ExtResource("1_glms7")
 inventory = ExtResource("2_oo155")
 
@@ -105,10 +106,6 @@ libraries/ = SubResource("AnimationLibrary_eaq8r")
 
 [node name="InventoryUI" parent="CanvasLayer" unique_id=940596079 instance=ExtResource("3_eaq8r")]
 visible = false
-offset_left = 265.0
-offset_top = 121.0
-offset_right = -361.0
-offset_bottom = -169.0
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2025464043]
 offset_left = 20.0

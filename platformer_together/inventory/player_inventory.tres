@@ -1,10 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://djxc88q5niu0i"]
 
-[ext_resource type="Script" uid="uid://br0f66ylypvrd" path="res://inventory/item_data.gd" id="1_fhgtu"]
+[ext_resource type="Script" uid="uid://b0ucovpsvfbkk" path="res://inventory/slot_data.gd" id="1_fhgtu"]
 [ext_resource type="Script" uid="uid://cgexrj1vqvtif" path="res://inventory/inventory_data.gd" id="2_ptr4k"]
-[ext_resource type="Resource" uid="uid://bb6idrcywte3y" path="res://inventory/items/item_coin.tres" id="3_65xq6"]
 
 [resource]
 script = ExtResource("2_ptr4k")
-items = Array[ExtResource("1_fhgtu")]([null, ExtResource("3_65xq6"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_fhgtu")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://cgexrj1vqvtif"

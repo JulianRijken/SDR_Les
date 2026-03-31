@@ -36,6 +36,9 @@ func kill():
 
 func _physics_process(delta: float) -> void:
 	
+	if GameManager._is_inventory_open():
+		return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

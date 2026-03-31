@@ -8,8 +8,15 @@ extends Node
 
 var score: int = 0
 
-func _process(delta: float) -> void:
-	inventory_ui.update(inventory);
+func _is_inventory_open() -> bool:
+	return inventory_ui.visible
+
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("inventory"):
+		inventory_ui.visible = not inventory_ui.visible
+		get_tree().paused = inventory_ui.visible;
+		if inventory_ui.visible: 
+			inventory_ui.update(inventory)
 
 func game_over():
 	game_over_animation.stop()
