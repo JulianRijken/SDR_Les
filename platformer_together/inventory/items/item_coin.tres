@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_n50ni")
 name = "Coin"
-description = "Money!"
+description = "Money! The more the better, as they say."
 texture = ExtResource("2_bb0kv")
+is_stackable = true
 metadata/_custom_type_script = "uid://br0f66ylypvrd"

@@ -9,10 +9,9 @@ region = Rect2(0, 528, 16, 16)
 
 [resource]
 script = ExtResource("1_lbp02")
-name = "Thee"
-description = "Lekker kopje thee, om te drinken"
+name = "Cup of Tea"
+description = "A delicious cup of tea. It might be usefull for quenching someone's thirst..."
 texture = SubResource("AtlasTexture_qieb4")
-is_stackable = true
 is_consumable = true
 consume_health_gain = 2
 metadata/_custom_type_script = "uid://br0f66ylypvrd"

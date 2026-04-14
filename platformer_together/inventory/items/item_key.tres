@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_ne8ln")
 name = "Key"
-description = "This key unlocks the door!"
+description = "A key. It might be usefull for opening a door..."
 texture = ExtResource("2_yppmc")
 metadata/_custom_type_script = "uid://br0f66ylypvrd"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cb6lcvudalj73" path="res://scripts/coin.gd" id="1_0t63x"]
 [ext_resource type="SpriteFrames" uid="uid://depma2oyqoepj" path="res://coin_sprite.tres" id="2_11l1o"]
+[ext_resource type="Resource" uid="uid://bb6idrcywte3y" path="res://inventory/items/item_coin.tres" id="2_d14el"]
 [ext_resource type="AudioStream" uid="uid://dn80opsbq6oen" path="res://assets/sounds/coin.wav" id="3_v7riw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d5gmh"]
@@ -109,6 +110,7 @@ _data = {
 [node name="Coin" type="Area2D" unique_id=1923817194]
 collision_mask = 2
 script = ExtResource("1_0t63x")
+coin_item = ExtResource("2_d14el")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1363686668]
 shape = SubResource("CircleShape2D_d5gmh")

@@ -10,7 +10,7 @@ region = Rect2(32, 432, 16, 16)
 [resource]
 script = ExtResource("1_jlavl")
 name = "Apple"
-description = "Hey apple!"
+description = "Hey apple! This is totally not a worthless item..."
 texture = SubResource("AtlasTexture_gcxqw")
 is_stackable = true
 metadata/_custom_type_script = "uid://br0f66ylypvrd"
